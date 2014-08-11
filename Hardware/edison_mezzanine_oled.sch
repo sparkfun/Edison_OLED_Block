@@ -18180,6 +18180,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FID3" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FID4" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 </parts>
 <sheets>
 <sheet>
@@ -18225,6 +18227,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND10" gate="1" x="200.66" y="127"/>
 <instance part="FID1" gate="G$1" x="246.38" y="20.32"/>
 <instance part="FID2" gate="G$1" x="246.38" y="17.78"/>
+<instance part="FID3" gate="G$1" x="243.84" y="20.32"/>
+<instance part="FID4" gate="G$1" x="243.84" y="17.78"/>
 </instances>
 <busses>
 </busses>
