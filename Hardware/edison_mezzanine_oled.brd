@@ -56,7 +56,7 @@
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
@@ -147,7 +147,7 @@
 <hole x="1.905" y="42.545" drill="2"/>
 <hole x="28.575" y="42.545" drill="2"/>
 <text x="29.21" y="25.4" size="1.27" layer="22" font="vector" ratio="15" rot="MR90" align="top-left">OLED
-Edzzanine</text>
+Stack</text>
 <wire x1="1.778" y1="44.45" x2="28.702" y2="44.45" width="0.2032" layer="20"/>
 <wire x1="30.48" y1="1.778" x2="28.702" y2="0" width="0.2032" layer="20" curve="-90"/>
 <wire x1="1.778" y1="0" x2="0" y2="1.778" width="0.2032" layer="20" curve="-90"/>
@@ -161,7 +161,7 @@ Edzzanine</text>
 <text x="17.78" y="26.4414" size="0.889" layer="22" font="vector" ratio="15" rot="MR90" align="center-left">FS1</text>
 <text x="10.795" y="3.048" size="1.27" layer="21" font="vector" ratio="15" rot="SR270" align="top-center">A</text>
 <text x="10.795" y="9.4234" size="1.27" layer="21" font="vector" ratio="15" rot="SR270" align="top-center">B</text>
-<text x="24.892" y="39.878" size="1.27" layer="21" font="vector" ratio="15" rot="SR270" align="top-left">OLED Edzzanine</text>
+<text x="24.892" y="39.878" size="1.27" layer="21" font="vector" ratio="15" rot="SR270" align="top-left">OLED Stack</text>
 <text x="16.51" y="43.18" size="0.889" layer="22" font="vector" ratio="15" rot="MR180" align="center-right">L</text>
 <text x="16.51" y="40.64" size="0.889" layer="22" font="vector" ratio="15" rot="MR180" align="center-right">C</text>
 <text x="16.51" y="38.1" size="0.889" layer="22" font="vector" ratio="15" rot="MR180" align="center-right">U</text>
