@@ -1,4 +1,4 @@
-Edison_Mezzanine_OLED
+Edison_OLED_Block
 =====================
 
 Equip your Edison with a graphic display using the Edison OLED board! This board features a 0.66", 64x48 pixel monochrome OLED.
