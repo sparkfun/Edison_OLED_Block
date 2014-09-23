@@ -1954,7 +1954,7 @@ design rules under a new name.</description>
 <vertex x="1.778" y="44.45"/>
 <vertex x="28.702" y="44.45" curve="-90"/>
 </polygon>
-<polygon width="0.2032" layer="1" spacing="0.254" orphans="yes" rank="6">
+<polygon width="0.2032" layer="1" spacing="0.254" isolate="0.1524" orphans="yes" rank="6">
 <vertex x="30.48" y="1.728" curve="-90"/>
 <vertex x="28.752" y="0"/>
 <vertex x="1.778" y="0" curve="-90"/>
@@ -2519,6 +2519,7 @@ design rules under a new name.</description>
 <approved hash="19,16,dfb7086ae1e5ca19"/>
 <approved hash="19,16,df677b5e9201c949"/>
 <approved hash="19,16,df7f631c89d3ca51"/>
+<approved hash="19,16,c90dfba66df85eac"/>
 <approved hash="19,16,653aa170e2abd900"/>
 <approved hash="19,16,1ca7a023a79ae6ff"/>
 <approved hash="19,16,6682b992fad9dab8"/>
@@ -2529,6 +2530,7 @@ design rules under a new name.</description>
 <approved hash="19,16,1ef5b57cb023e709"/>
 <approved hash="19,16,655ac9ee8a35daa0"/>
 <approved hash="19,16,1e63cb19ce60e4bb"/>
+<approved hash="19,16,9991956fd27c967b"/>
 <approved hash="6,16,6c4e1b8819f86e3e"/>
 </errors>
 </board>
