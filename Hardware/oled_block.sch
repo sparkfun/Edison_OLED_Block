@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6274,10 +6274,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
-<text x="231.14" y="180.34" size="1.27" layer="97">1.65 &lt;= VDD &lt;= 3.3V
-3.3 &lt;= VBAT &lt;= 4.2V</text>
 <text x="149.86" y="7.62" size="2.54" layer="94">Jim Lindblom</text>
-<text x="238.76" y="7.62" size="2.54" layer="94">v02</text>
+<text x="238.76" y="7.62" size="2.54" layer="94">v10</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
