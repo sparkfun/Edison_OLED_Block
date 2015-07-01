@@ -34,3 +34,10 @@ eagle.epf
 *.info
 
 *.eps
+
+
+# C++ files
+*.o
+
+# Example builds
+oled_pong
