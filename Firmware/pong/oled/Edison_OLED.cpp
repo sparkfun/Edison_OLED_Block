@@ -372,6 +372,13 @@ void edOLED::print(int d)
 	print(temp);
 }
 
+void edOLED::print(float f)
+{
+	char temp[24];
+	sprintf(temp, "%.2f", f);
+	print(temp);
+}
+
 /** \brief Set cursor position.
 
     edOLED's cursor position to x,y.
