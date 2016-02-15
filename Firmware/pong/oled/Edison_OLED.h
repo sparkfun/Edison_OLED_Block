@@ -26,7 +26,7 @@
 #ifndef EDISON_OLED_H
 #define EDISON_OLED_H
 
-#define swap(a, b) { unsigned char t = a; a = b; b = t; }
+#define swapOLED(a, b) { unsigned char t = a; a = b; b = t; }
 
 #define BLACK 0
 #define WHITE 1
