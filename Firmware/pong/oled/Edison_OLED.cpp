@@ -432,14 +432,14 @@ void edOLED::line(unsigned char x0, unsigned char y0, unsigned char x1, unsigned
 	unsigned char steep = abs(y1 - y0) > abs(x1 - x0);
 	if (steep)
 	{
-		swap(x0, y0);
-		swap(x1, y1);
+		swapOLED(x0, y0);
+		swapOLED(x1, y1);
 	}
 
 	if (x0 > x1)
 	{
-		swap(x0, x1);
-		swap(y0, y1);
+		swapOLED(x0, x1);
+		swapOLED(y0, y1);
 	}
 
 	unsigned char dx, dy;
