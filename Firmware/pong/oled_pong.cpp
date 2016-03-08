@@ -159,18 +159,10 @@ void updatePaddlePositions()
 	if (BUTTON_UP.pinRead() == LOW)
 	{
 		player1PosY--;
-		if (player1PosY - halfPaddleHeight < 0)
-		{
-			player1PosY = halfPaddleHeight;
-		}
 	}
 	if (BUTTON_DOWN.pinRead() == LOW)
 	{
 		player1PosY++;
-		if (player1PosY - halfPaddleHeight > LCDHEIGHT)
-		{
-			player1PosY = LCDHEIGHT - halfPaddleHeight;
-		}
 	}
 	player1PosY = constrainPosition(player1PosY);
 
@@ -193,18 +185,10 @@ void updatePaddlePositions()
 		if (BUTTON_A.pinRead() == LOW)
 		{
 			player2PosY--;
-			if (player2PosY - halfPaddleHeight < 0)
-			{
-				player2PosY = halfPaddleHeight;
-			}
 		}
 		if (BUTTON_B.pinRead() == LOW)
 		{
 			player2PosY++;
-			if (player2PosY - halfPaddleHeight > LCDHEIGHT)
-			{
-				player2PosY = LCDHEIGHT - halfPaddleHeight;
-			}
 		}
 	}
 	player2PosY = constrainPosition(player2PosY);
