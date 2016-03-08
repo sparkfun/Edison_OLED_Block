@@ -105,6 +105,7 @@ public:
 	unsigned char write(unsigned char);
 	void print(const char * c);
 	void print(int d);
+	void print(float f);
 
 	// RAW LCD functions
 	void command(unsigned char c);
