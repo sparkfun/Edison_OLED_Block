@@ -29,7 +29,6 @@ You may need to use the --unsafe-perm option if you get the warning "cannot run 
 ```
 $ npm install edison-oled --unsafe-perm
 ```
-
 API
 ============
 This module is only designed to work on the Intel Edison.
