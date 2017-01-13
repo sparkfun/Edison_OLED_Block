@@ -1,0 +1,48 @@
+{
+  "name": "edison-oled",
+  "version": "0.0.5",
+  "description": "Node wrapper for Sparkfun Edison OLED Block. Includes wrappers around OLED, GPIO and SPI classes.",
+  "license": "MIT",
+  "keywords": [
+    "intel",
+    "edison",
+    "sparkfun",
+    "oled",
+    "spi",
+    "gpio",
+    "node",
+    "graphic",
+    "display",
+    "64x48",
+    "monochrome",
+    "mezzanine",
+    "breakout",
+    "board"
+  ],
+  "author": {
+    "name": "Brian Feldman <bfeldman74@gmail.com>"
+  },
+  "contributors": [
+    {
+      "name": "see original project",
+      "url": "https://github.com/sparkfun/Edison_OLED_Block/graphs/contributors"
+    }
+  ],
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bfeldman74/Edison_OLED_Block"
+  },
+  "bugs": {
+    "url": "https://github.com/bfeldman74/Edison_OLED_Block/issues"
+  },
+  "dependencies": {
+    "nan": "2.5.0"
+  },
+  "config": {
+    "unsafe-perm": true
+  },
+  "scripts": {
+    "preinstall": "npm update nan && node-gyp configure && node-gyp rebuild"
+  }
+}
