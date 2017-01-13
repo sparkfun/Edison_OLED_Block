@@ -31,8 +31,6 @@ $ npm install edison-oled --unsafe-perm
 ```
 API
 ============
-This module is only designed to work on the Intel Edison.
-
 Example using the OLED screen
 
 ```javascript
@@ -100,11 +98,11 @@ rstpin.pinWrite(edison.HIGH);
 dcpin.pinWrite(edison.LOW); // DC pin LOW
 spi.transferData(edison.DISPLAYOFF);
 spi.transferData(edison.SETDISPLAYCLOCKDIV);
-spi.transferData(0X80);
+spi.transferData(0x80);
 	
 //send data to OLED
 dcpin.pinWrite(edison.HIGH); //DC pin HIGH
-spi.transferData(c);
+spi.transferData(0xFF);
 
 ```
 

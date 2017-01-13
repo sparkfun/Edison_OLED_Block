@@ -1,6 +1,6 @@
 {
   "name": "edison-oled",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Node wrapper for Sparkfun Edison OLED Block. Includes wrappers around OLED, GPIO and SPI classes.",
   "license": "MIT",
   "keywords": [
@@ -43,6 +43,6 @@
     "unsafe-perm": true
   },
   "scripts": {
-    "preinstall": "node-gyp configure && node-gyp rebuild"
+    "preinstall": "npm update nan && node-gyp configure && node-gyp rebuild"
   }
 }
