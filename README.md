@@ -1,3 +1,11 @@
+*Fork of SparkFun Edison OLED Block repo, adding a command-line tool to interact with the OLED Block*
+
+See [Firmware/oled](Firmware/oled/) for the command-line tool.
+
+Contains very minor modifications to the original SparkFun OLED drivers, such as making the screen buffer a public field of the `edOLED` class rather than a private static.
+
+-----
+
 SparkFun Edison OLED Block
 ===========================
 
