@@ -118,6 +118,10 @@ void eval(char ***cmd) {
 	} else if(!strcmp("wait", c)) {
 		for(int bv = buttons_value(); bv == buttons_value();)
 			usleep(50000);
+	} else if(!strcmp("displayoff", c)) {
+		oled.command(DISPLAYOFF);
+	} else if(!strcmp("displayon", c)) {
+		oled.command(DISPLAYON);
 	} else if(!strcmp("save", c)) {
 		int fd = creat(NEXT(cmd), S_IRUSR | S_IRGRP | S_IROTH | S_IWUSR);
 		if(fd != -1) {
