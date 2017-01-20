@@ -117,7 +117,7 @@ void eval(char ***cmd) {
 		printf("\n");
 	} else if(!strcmp("wait", c)) {
 		for(int bv = buttons_value(); bv == buttons_value();)
-			usleep(5000);
+			usleep(50000);
 	} else if(!strcmp("save", c)) {
 		int fd = creat(NEXT(cmd), S_IRUSR | S_IRGRP | S_IROTH | S_IWUSR);
 		if(fd != -1) {
