@@ -117,7 +117,7 @@ void eval(char ***cmd) {
 		printf("\n");
 	} else if(!strcmp("wait", c)) {
 		for(int bv = buttons_value(); bv == buttons_value();)
-			usleep(10000);
+			usleep(1000);
 	} else if(!strcmp("displayoff", c)) {
 		oled.command(DISPLAYOFF);
 	} else if(!strcmp("displayon", c)) {
