@@ -148,6 +148,7 @@ int main(int argc, char **argv) {
 				n += 1;
 			break;
 		default:
+			q = p;
 			usleep(100);
 			continue;
 		}
