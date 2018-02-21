@@ -59,7 +59,7 @@ void draw_field(int n, int row) {
 		int x = 7 * (i % 9);
 		int y = 8 + 8 * ((i / 9) - row);
 		if (i == n) {
-			oled.rectFill(x, y, 7, 8);
+			oled.rectFill(x, y, 7, 9);
 			oled.setColor(BLACK);
 		}
 		oled.setCursor(x+1, y);
