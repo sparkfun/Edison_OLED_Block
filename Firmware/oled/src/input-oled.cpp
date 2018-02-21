@@ -54,7 +54,7 @@ void init_field() {
 }
 
 
-void draw_field(int n, int row) {
+void draw_field(int n, int row, char *text) {
 	int ul = 9 * row, lr = 9 * (row + 4) + 9 - 1;
 	int x, y;
 
@@ -87,7 +87,15 @@ void draw_field(int n, int row) {
 	buf[0] = field[n];
 	oled.print(buf);
 	oled.setColor(WHITE);
+
+	if (strlen(text) > 10)
+		text += strlen(text) - 10;
+	oled.setCursor(2, 0);
+	oled.print(text);
+
 	oled.display();
+
+
 }
 
 int pressed() {
@@ -117,10 +125,14 @@ int main(int argc, char **argv) {
 	int n = 0;
 	int row = 0;
 
-	draw_field(n, row);
+	draw_field(n, row, "");
 
 	int sleeps = 0;
 	int q = 0;
+
+	char text[256];
+	memset(text, 0, 256);
+	int pos = 0;
 
 	for (int p = pressed(); p != SELECT_MASK; p = pressed()) {
 		while (q == p && sleeps < 500) {
@@ -147,6 +159,14 @@ int main(int argc, char **argv) {
 			if (n < FIELD_SIZE - 1)
 				n += 1;
 			break;
+		case A_MASK:
+			if (pos < 255)
+				text[pos++] = field[n];
+			break;
+		case B_MASK:
+			if (pos > 0)
+				text[--pos] = 0;
+			break;
 		default:
 			q = p;
 			usleep(100);
@@ -156,7 +176,7 @@ int main(int argc, char **argv) {
 			row -= 1;
 		if (row + 4 < n/9)
 			row += 1;
-		draw_field(n, row);
+		draw_field(n, row, text);
 		q = p;
 	}
 
