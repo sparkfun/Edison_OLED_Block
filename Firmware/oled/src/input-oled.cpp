@@ -159,4 +159,7 @@ int main(int argc, char **argv) {
 		draw_field(n, row);
 		q = p;
 	}
+
+	oled.setColor(BLACK);
+	oled.rectFill(0, 0, 64, 48);
 }
