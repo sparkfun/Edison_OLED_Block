@@ -45,8 +45,9 @@ void init_field() {
 		field[i++] = c;
 }
 
+
 void draw_field(int n, int row) {
-	int ul = 10 * row, lr = 10 * (row + 4) + 9;
+	int ul = 9 * row, lr = 9 * (row + 4) + 9 - 1;
 
 	oled.setColor(BLACK);
 	oled.rectFill(0, 8, 64, 40);
@@ -55,13 +56,13 @@ void draw_field(int n, int row) {
 
 	char buf[] = {0,0};
 	for (int i = ul; i <= lr && i < FIELD_SIZE; i++) {
-		int x = 6 * (i % 10);
-		int y = 8 + 8 * ((i / 10) - row);
+		int x = 7 * (i % 9);
+		int y = 8 + 8 * ((i / 9) - row);
 		if (i == n) {
-			oled.rectFill(x, y, 6, 8);
+			oled.rectFill(x, y, 7, 8);
 			oled.setColor(BLACK);
 		}
-		oled.setCursor(x, y);
+		oled.setCursor(x+1, y);
 		buf[0] = field[i];
 		oled.print(buf);
 		if (i == n)
