@@ -146,5 +146,7 @@ int main(int argc, char **argv) {
 		if (row + 4 < n/9)
 			row += 1;
 		draw_field(n, row);
+		while (p == pressed())
+			usleep(100);
 	}
 }
