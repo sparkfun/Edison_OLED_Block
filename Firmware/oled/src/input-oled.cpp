@@ -86,10 +86,11 @@ void draw_field(int n, int row, char *text) {
 	oled.setCursor(x+1, y);
 	buf[0] = field[n];
 	oled.print(buf);
-	oled.setColor(WHITE);
 
+	oled.rectFill(0, 0, 64, 8);
 	if (strlen(text) > 10)
 		text += strlen(text) - 10;
+	oled.setColor(WHITE);
 	oled.setCursor(2, 0);
 	oled.print(text);
 
@@ -182,4 +183,6 @@ int main(int argc, char **argv) {
 
 	oled.setColor(BLACK);
 	oled.rectFill(0, 0, 64, 48);
+
+	printf("%s", text);
 }
