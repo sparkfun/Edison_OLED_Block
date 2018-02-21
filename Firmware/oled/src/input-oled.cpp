@@ -79,4 +79,6 @@ int main(int argc, char **argv) {
 
 	draw_field(15, 0);
 
+	oled.display();
+
 }
