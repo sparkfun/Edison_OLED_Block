@@ -23,6 +23,14 @@ gpio BUTTON_SELECT(48, INPUT);
 gpio BUTTON_A(49, INPUT);
 gpio BUTTON_B(46, INPUT);
 
+#define UP_MASK 1
+#define DOWN_MASK 2
+#define LEFT_MASK 4
+#define RIGHT_MASK 8
+#define SELECT_MASK 16
+#define A_MASK 32
+#define B_MASK 64
+
 #define FIELD_SIZE 95
 
 char field[FIELD_SIZE];
@@ -79,6 +87,26 @@ void draw_field(int n, int row) {
 	buf[0] = field[n];
 	oled.print(buf);
 	oled.setColor(WHITE);
+	oled.display();
+}
+
+int pressed() {
+	int mask = 0;
+	if (BUTTON_UP.pinRead() == LOW)
+		mask |= UP_MASK;
+	if (BUTTON_DOWN.pinRead() == LOW)
+		mask |= DOWN_MASK;
+	if (BUTTON_LEFT.pinRead() == LOW)
+		mask |= LEFT_MASK;
+	if (BUTTON_RIGHT.pinRead() == LOW)
+		mask |= RIGHT_MASK;
+	if (BUTTON_SELECT.pinRead() == LOW)
+		mask |= SELECT_MASK;
+	if (BUTTON_A.pinRead() == LOW)
+		mask |= A_MASK;
+	if (BUTTON_B.pinRead() == LOW)
+		mask |= B_MASK;
+	return mask;
 }
 
 int main(int argc, char **argv) {
@@ -86,11 +114,37 @@ int main(int argc, char **argv) {
 
 	oled.begin();
 
-	int x = 0, y = 0;
-	int offset = 0;
+	int n = 0;
+	int row = 0;
 
-	draw_field(15, 0);
+	draw_field(n, row);
 
-	oled.display();
-
+	for (int p = pressed(); p != SELECT_MASK; p = pressed()) {
+		switch(p) {
+		case UP_MASK:
+			if (n >= 9)
+				n -= 9;
+			break;
+		case DOWN_MASK:
+			if (n < FIELD_SIZE - 9)
+				n += 9;
+			break;
+		case LEFT_MASK:
+			if (n >= 1)
+				n -= 1;
+			break;
+		case RIGHT_MASK:
+			if (n < FIELD_SIZE - 1)
+				n += 1;
+			break;
+		default:
+			usleep(100);
+			continue;
+		}
+		if (row > n / 9)
+			row -= 1;
+		if (row + 4 < n/9)
+			row += 1;
+		draw_field(n, row);
+	}
 }
