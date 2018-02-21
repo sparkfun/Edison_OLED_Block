@@ -54,7 +54,7 @@ void init_field() {
 }
 
 
-void draw_field(int n, int row, char *text) {
+void draw_field(int n, int row, const char *text) {
 	int ul = 9 * row, lr = 9 * (row + 4) + 9 - 1;
 	int x, y;
 
@@ -92,7 +92,7 @@ void draw_field(int n, int row, char *text) {
 		text += strlen(text) - 10;
 	oled.setColor(WHITE);
 	oled.setCursor(2, 0);
-	oled.print(text);
+	oled.print(text + (strlen(text) > 10 ? strlen(text) - 10 : 0));
 
 	oled.display();
 
