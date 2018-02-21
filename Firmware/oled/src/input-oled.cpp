@@ -48,6 +48,7 @@ void init_field() {
 
 void draw_field(int n, int row) {
 	int ul = 9 * row, lr = 9 * (row + 4) + 9 - 1;
+	int x, y;
 
 	oled.setColor(BLACK);
 	oled.rectFill(0, 8, 64, 40);
@@ -56,8 +57,10 @@ void draw_field(int n, int row) {
 
 	char buf[] = {0,0};
 	for (int i = ul; i <= lr && i < FIELD_SIZE; i++) {
-		int x = 7 * (i % 9);
-		int y = 8 + 8 * ((i / 9) - row);
+		if (i == n)
+			continue;
+		x = 7 * (i % 9);
+		y = 8 + 8 * ((i / 9) - row);
 		if (i == n) {
 			oled.rectFill(x, y, 7, 9);
 			oled.setColor(BLACK);
@@ -68,6 +71,14 @@ void draw_field(int n, int row) {
 		if (i == n)
 			oled.setColor(WHITE);
 	}
+	x = 7 * (n % 9);
+	y = 8 + 8 * ((n / 9) - row);
+	oled.rectFill(x, y, 7, 9);
+	oled.setColor(BLACK);
+	oled.setCursor(x+1, y);
+	buf[0] = field[n];
+	oled.print(buf);
+	oled.setColor(WHITE);
 }
 
 int main(int argc, char **argv) {
