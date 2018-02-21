@@ -183,6 +183,7 @@ int main(int argc, char **argv) {
 
 	oled.setColor(BLACK);
 	oled.rectFill(0, 0, 64, 48);
+	oled.display();
 
 	printf("%s", text);
 }
