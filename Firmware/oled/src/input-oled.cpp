@@ -119,7 +119,17 @@ int main(int argc, char **argv) {
 
 	draw_field(n, row);
 
+	int sleeps = 0;
+	int q = 0;
+
 	for (int p = pressed(); p != SELECT_MASK; p = pressed()) {
+		while (q == p && sleeps < 500) {
+			usleep(1000);
+			p = pressed();
+			sleeps++;
+		}
+		if (q != p)
+			sleeps = 0;
 		switch(p) {
 		case UP_MASK:
 			if (n >= 9)
@@ -146,7 +156,6 @@ int main(int argc, char **argv) {
 		if (row + 4 < n/9)
 			row += 1;
 		draw_field(n, row);
-		while (p == pressed())
-			usleep(100);
+		q = p;
 	}
 }
